@@ -3,7 +3,7 @@ from django.urls import reverse
 # Create your models here.
 
 # This Model is Regarding The Employee Deatils....
-# Where Employee Details of Ename,salary,location
+# Where Employee Details of Ename,salary,location,mobile
 class Employee(models.Model):
     eno = models.IntegerField()
     ename  = models.CharField(max_length=50)
