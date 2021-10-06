@@ -1,0 +1,19 @@
+{% extends 'employee/base.html' %}
+{% block title %}Delete Employee   {% endblock %}
+
+{% block body %}
+    {% if employee %}
+        <h1>Are You Sure Want To Delete This {{ employee.ename }} Object..? </h1>
+        <form method="post">
+
+        {% csrf_token %}
+        <input type="submit" value="Delete" class="btn btn-danger">
+        <a href="{% url 'employees' %}" class="btn btn-primary">Cancel</a>
+        </form>
+
+    {% else %}
+        <h1>Requested Resource Not Available for Deleting..</h1>
+    {% endif %}
+
+
+{% endblock %}
